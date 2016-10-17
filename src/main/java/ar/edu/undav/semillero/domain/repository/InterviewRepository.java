@@ -1,6 +1,7 @@
 package ar.edu.undav.semillero.domain.repository;
 
-import ar.edu.undav.semillero.domain.entity.Company;
+
+import ar.edu.undav.semillero.domain.entity.Interview;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -8,6 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * jlagostena@bitsense.com.ar
  * .
  */
-public interface CompanyRepository extends JpaRepository<Company, Long> {
+public interface InterviewRepository extends JpaRepository<Interview, Long> {
 }
 

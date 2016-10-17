@@ -1,9 +1,8 @@
 package ar.edu.undav.semillero.domain.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Juan Lagostena on 12/10/16
@@ -20,6 +19,9 @@ public class Company {
 
     private String name;
     private String contact;
+
+    @OneToMany(mappedBy = "company")
+    private List<Interview> interviews = new ArrayList<>();
 
     public Company() {
     }
@@ -39,6 +41,11 @@ public class Company {
 
     public String getContact() {
         return contact;
+    }
+
+
+    public void addInterview(Interview interview) {
+        this.interviews.add(interview);
     }
 
     @Override
