@@ -53,4 +53,8 @@ public class Graduated {
                 '}';
     }
 
+	public void setNode(Node node) {
+		this.node = node;
+	}
+
 }

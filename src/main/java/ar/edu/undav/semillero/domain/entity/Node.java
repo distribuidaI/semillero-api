@@ -15,7 +15,7 @@ public class Node {
     private String name;
     private String address;
 
-    @OneToMany(cascade = CascadeType.MERGE)
+    @OneToMany(mappedBy = "node")
 	private List<Graduated> graduateds = new ArrayList<>();
 
    

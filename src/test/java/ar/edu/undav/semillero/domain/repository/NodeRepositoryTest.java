@@ -30,9 +30,10 @@ public class NodeRepositoryTest {
     public void testSave() {
         Graduated graduated = new Graduated("Daniel");
         Node node = new Node("Bariloche","Calle Verdadera 123", graduated);
+        graduated.setNode(node);
         node.addGraduated(graduated);
-        graduatedRepository.save(graduated);
         nodeRepository.save(node);
+        graduatedRepository.save(graduated);
     }
 
 
