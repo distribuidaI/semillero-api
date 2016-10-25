@@ -2,6 +2,7 @@ package ar.edu.undav.semillero.domain.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -43,6 +44,10 @@ public class Graduated {
 
     public void addInterview(Interview interview) {
         this.interviews.add(interview);
+    }
+
+    public List<Interview> getInterviews() {
+        return Collections.unmodifiableList(interviews);
     }
 
     @Override
